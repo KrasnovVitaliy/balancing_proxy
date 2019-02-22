@@ -5,13 +5,18 @@ import (
 	"reverse_proxy/config"
 	"sync"
 	"log"
+	"flag"
 )
 
 var wg sync.WaitGroup
 
 func main() {
+
+	configPath := flag.String("c", "./config.json", "config file path")
+	flag.Parse()
+
 	cnfg := new(config.Config)
-	cnfg.Load("config.json")
+	cnfg.Load(*configPath)
 
 	wg.Add(len(cnfg.Routes))
 	for _, route := range cnfg.Routes {
