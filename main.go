@@ -1,8 +1,8 @@
 package main
 
 import (
-	"reverse_proxy/proxyserver"
-	"reverse_proxy/config"
+	"balancing_proxy/proxyserver"
+	"balancing_proxy/config"
 	"sync"
 	"log"
 	"flag"
