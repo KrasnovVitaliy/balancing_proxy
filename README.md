@@ -1,2 +1,2 @@
 # reverse_proxy
-Reverse proxy with balancing
+Simple proxy server with round robin balancing. 
